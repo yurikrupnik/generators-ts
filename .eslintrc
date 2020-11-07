@@ -4,6 +4,14 @@
   "plugins": [
     "@typescript-eslint"
   ],
+  "rules": {
+    "import/no-unresolved": 0,
+    "indent": [2, 4],
+    "comma-dangle": 0,
+    "no-underscore-dangle": 0,
+    "implicit-arrow-linebreak": 0,
+    "quotes": ["error", "double"]
+  },
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended"

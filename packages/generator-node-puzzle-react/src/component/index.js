@@ -1,4 +1,4 @@
-import Base from 'yeoman-generator';
+import Base from "yeoman-generator";
 // var Webpack = require('../webpack/app');
 // const Base = require('yeoman-generator');
 // var webpack = require('../webpack/app');
@@ -7,6 +7,7 @@ import Base from 'yeoman-generator';
 // var reduce = require('lodash.reduce');
 // const utils = require('./utils');
 // const questions = require('./questions');
+
 class ReactComponentGenerator extends Base {
     constructor(args, opts) {
         super(args, opts);
@@ -18,25 +19,25 @@ class ReactComponentGenerator extends Base {
         //     required: true
         // });
 
-        this.option('css', {
+        this.option("css", {
             type: Boolean,
             required: false,
-            desc: 'Include css files',
-            default: true
+            desc: "Include css files",
+            default: true,
         });
 
-        this.option('sass', {
+        this.option("sass", {
             type: Boolean, // todo check that
             required: Boolean,
-            desc: 'Include sass files',
-            default: false
+            desc: "Include sass files",
+            default: false,
         });
 
-        this.option('ssr', {
+        this.option("ssr", {
             type: Boolean,
             required: Boolean,
-            desc: 'Include server side rendering',
-            default: false
+            desc: "Include server side rendering",
+            default: false,
         });
     }
 
@@ -77,39 +78,39 @@ class ReactComponentGenerator extends Base {
 
     conflicts() {
         // todo test
-        const json = this.fs.readJSON(this.destinationPath('package.json'));
+        const json = this.fs.readJSON(this.destinationPath("package.json"));
         if (json) {
             // this.fs.extendJSON(this.destinationPath('package.json'), {
             //     name: 'plo'
             // });
         } else {
-            this.fs.extendJSON(this.destinationPath('package.json'), {
-                name: 'as',
-                version: '0.0.0',
-                engines: { node: '>=6' },
+            this.fs.extendJSON(this.destinationPath("package.json"), {
+                name: "as",
+                version: "0.0.0",
+                engines: { node: ">=6" },
                 scripts: {},
-                main: 'index.ksx',
+                main: "index.ksx",
                 dependencies: {},
-                devDependencies: {}
+                devDependencies: {},
             });
         }
-        const lint = this.fs.readJSON(this.destinationPath('.eslintrc'));
-        const babel = this.fs.readJSON(this.destinationPath('.babelrc'));
+        const lint = this.fs.readJSON(this.destinationPath(".eslintrc"));
+        const babel = this.fs.readJSON(this.destinationPath(".babelrc"));
         if (lint) {
-            this.fs.extendJSON(this.destinationPath('.eslintrc'), {
+            this.fs.extendJSON(this.destinationPath(".eslintrc"), {
                 rules: {
-                    'react/jsx-indent': [2, 4], // personal
-                    'react/jsx-indent-props': 0, // personal
-                    'jsx-a11y/anchor-is-valid': [
-                        'error',
+                    "react/jsx-indent": [2, 4], // personal
+                    "react/jsx-indent-props": 0, // personal
+                    "jsx-a11y/anchor-is-valid": [
+                        "error",
                         {
-                            components: ['Link'],
-                            specialLink: ['to'],
-                            aspects: ['noHref', 'invalidHref', 'preferButton']
-                        }
-                    ]
+                            components: ["Link"],
+                            specialLink: ["to"],
+                            aspects: ["noHref", "invalidHref", "preferButton"],
+                        },
+                    ],
                 },
-                extends: ['airbnb'] // overwrites arrays
+                extends: ["airbnb"], // overwrites arrays
             });
         }
         // else {
@@ -132,9 +133,9 @@ class ReactComponentGenerator extends Base {
 
         if (babel) {
             // todo test
-            this.fs.extendJSON(this.destinationPath('.babelrc'), {
-                presets: babel.presets.concat('@babel/preset-react'),
-                plugins: babel.plugins.concat('react-loadable/babel')
+            this.fs.extendJSON(this.destinationPath(".babelrc"), {
+                presets: babel.presets.concat("@babel/preset-react"),
+                plugins: babel.plugins.concat("react-loadable/babel"),
             });
         }
     }
