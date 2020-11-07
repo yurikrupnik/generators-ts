@@ -42,12 +42,12 @@ class ReactGenerator extends Base {
         });
     }
 
-    configuring(): void {
-        // this.config.set({
-        //     extentions: '.jsx',
-        //     sos: 'yes'
-        // });
-    }
+    // configuring(): void {
+    //     this.config.set({
+    //         extentions: ".jsx",
+    //         sos: "yes",
+    //     });
+    // }
 
     writing(): void {
         // this.fs.extendJSON(this.destinationPath('package.json'), this._getDefaultPackage());

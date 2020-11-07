@@ -5,6 +5,8 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "arrow-body-style": "warn",
+    "no-use-before-define": "warn",
     "import/no-unresolved": 0,
     "indent": [2, 4],
     "comma-dangle": 0,
@@ -14,7 +16,8 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended"
+    "plugin:@typescript-eslint/eslint-recommended",
+    "airbnb-base"
   ],
   "env": {
     "node": true,
