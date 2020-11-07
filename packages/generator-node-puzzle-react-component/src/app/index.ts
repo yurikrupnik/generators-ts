@@ -51,6 +51,8 @@ class ReactGenerator extends Base {
     // }
 
     writing(): void {
+        // this.fs.copyTpl(this.templatePath(), this.destinationPath());
+        this.fs.copyTpl(this.templatePath(), this.destinationPath(), this.options);
         // this.fs.extendJSON(this.destinationPath('package.json'), this._getDefaultPackage());
         this.fs.extendJSON(this.destinationPath("package.json"), {
             name: "came-from-react",

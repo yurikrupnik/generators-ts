@@ -1,4 +1,5 @@
 import path from "path";
+// import copy from "rollup-plugin-copy";
 import copy from "rollup-plugin-copy";
 import esBuild from "rollup-plugin-esbuild";
 
@@ -20,14 +21,17 @@ const defaultModule = {
     ],
     plugins: [
         esBuild({}),
-        copy({
-            targets: [
-                {
-                    src: "src/app/templates",
-                    dest: "generators/app/",
-                },
-            ],
-        }),
+        // copy({
+        //     targets: [
+        //         {
+        //             src: "src/app/templates",
+        //             dest: "generators/app/",
+        //         },
+        //     ],
+        //     // copyOnce: true,
+        //     // hook: "writeBundle",
+        //     // flatten: false,
+        // }),
         // copy({
         //     // targets: [{ src: path.join(cwd, "package.json"), dest: "generators" }],
         //     targets: [{ src: path.join(cwd, "package.json"), dest: "generators" }],

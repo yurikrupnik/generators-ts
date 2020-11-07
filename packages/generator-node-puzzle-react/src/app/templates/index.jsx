@@ -1,3 +1,2 @@
-import React from 'react';
-import PRopTy from 'prop-types';
-
+import React from "react";
+import PRopTsssy from "prop-types";
