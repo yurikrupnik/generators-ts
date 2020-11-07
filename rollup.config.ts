@@ -1,13 +1,14 @@
-import path from "path";
+// import path from "path";
 // import copy from "rollup-plugin-copy";
-import copy from "rollup-plugin-copy";
+// import copy from "rollup-plugin-copy";
+// eslint-disable-next-line import/no-extraneous-dependencies
 import esBuild from "rollup-plugin-esbuild";
 
-const cwd = process.cwd();
+// const cwd = process.cwd();
 
 const globals = {
-    react: "React",
-    "prop-types": "PropTypes",
+    // react: "React",
+    // "prop-types": "PropTypes",
 };
 
 const defaultModule = {
