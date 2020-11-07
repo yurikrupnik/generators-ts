@@ -1,0 +1,72 @@
+{
+  "name": "generators-ts",
+  "version": "1.0.0",
+  "description": "Yeoman generators for full stack applications and mono repo support",
+  "main": "index.js",
+  "scripts": {
+    "lint:scoped": "lerna run lint --scope generator-node-puzzle-eslint",
+    "start": "lerna run --parallel start",
+    "pi": "npx lerna exec -- npm i",
+    "lint": "lerna run --parallel lint",
+    "test": "lerna run --stream test",
+    "build": "lerna run --parallel build",
+    "builds": "lerna run build --scope generator-node-puzzle-babel",
+    "pretests": "npm run lint",
+    "prewatch": "npm run prebuild",
+    "prepublishOnly": "npm run build",
+    "publish": "lerna publish",
+    "link": "lerna run --stream link",
+    "unlink": "lerna run --stream unlink"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yurikrupnik/generators-ts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yurikrupnik/generators-ts/issues"
+  },
+  "homepage": "https://github.com/yurikrupnik/generators-ts#readme",
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-typescript": "^7.12.1",
+    "@types/jest": "^26.0.15",
+    "@types/yeoman-generator": "^4.11.3",
+    "@types/yeoman-test": "^2.0.5",
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
+    "esbuild": "^0.7.19",
+    "eslint": "^7.11.0",
+    "jest": "^26.6.1",
+    "lerna": "^3.22.1",
+    "prettier": "^2.1.2",
+    "rollup": "^2.32.1",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-esbuild": "^2.5.2",
+    "ts-jest": "^26.4.2",
+    "typescript": "^4.0.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "globals": {
+      "ts-jest": {
+        "babelConfig": {
+          "plugins": ["@babel/plugin-transform-modules-commonjs"]
+        }
+      }
+    },
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "testPathIgnorePatterns": [
+      "templates"
+    ]
+  },
+  "prettier": {
+    "printWidth": 100,
+    "arrowParens": "always",
+    "tabWidth": 4
+  }
+}
