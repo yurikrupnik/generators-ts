@@ -30,9 +30,9 @@
   },
   "homepage": "https://github.com/yurikrupnik/generators-ts#readme",
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "7.12.1",
-    "@babel/preset-env": "7.12.1",
-    "@babel/preset-typescript": "7.12.1",
+    "@babel/plugin-transform-modules-commonjs": "7.13.8",
+    "@babel/preset-env": "7.13.10",
+    "@babel/preset-typescript": "7.13.0",
     "@types/jest": "26.0.20",
     "@types/react": "16.9.56",
     "@types/yeoman-generator": "4.11.3",
