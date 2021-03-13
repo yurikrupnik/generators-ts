@@ -57,27 +57,28 @@ class ReactGenerator extends Base {
         this.fs.copyTpl(this.templatePath(), this.destinationPath("src"), this.options);
     }
 
-    _installPackages(): void {
-        // this.addDependencies({ react: "*" });
-        this.npmInstall(["react", "prop-types", "react-dom", "react-router", "react-router-dom"]);
-    }
+    // _installPackages(): void {
+    //     // this.addDependencies({ react: "*" });
+    //     // this.npmInstall(["react", "prop-types",
+    //     // "react-dom", "react-router", "react-router-dom"]);
+    // }
 
-    _installDevPackages(): void {
-        this.npmInstall(
-            [
-                "@babel/preset-react",
-                "eslint-plugin-jsx-a11y",
-                "eslint-plugin-react",
-                "react-testing-library",
-            ],
-            { "save-dev": true }
-        );
-    }
+    // _installDevPackages(): void {
+    //     // this.npmInstall(
+    //     //     [
+    //     //         "@babel/preset-react",
+    //     //         "eslint-plugin-jsx-a11y",
+    //     //         "eslint-plugin-react",
+    //     //         "react-testing-library",
+    //     //     ],
+    //     //     { "save-dev": true }
+    //     // );
+    // }
 
-    install(): void {
-        this._installPackages();
-        // this._installDevPackages();
-    }
+    // install(): void {
+    //     // this._installPackages();
+    //     // this._installDevPackages();
+    // }
 
     conflicts(): void {
         // todo test

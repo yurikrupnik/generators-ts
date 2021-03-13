@@ -18,10 +18,8 @@ import helpers from "yeoman-test";
 //                 )
 //             //     [.cd(dir)]                  // runs the test inside a non temporary dir
 //             // [.doInDir(dir => {})        // prepares the test dir
-            //     [.withGenerators([])]       // registers additional generators
 //             // [.withLookups({})]          // runs Environment lookups
 //             // [.withOptions({})]          // passes options to the generator
-//             // [.withLocalConfig({})]      // sets the generator config as soon as it is instantiated
 //             // [.withPrompts()]            // simulates the prompt answers
 //             // [.build(runContext => {     // instantiates Environment/Generator
 //             //     [runContext.env...]       // does something with the environment
@@ -64,7 +62,6 @@ describe("react generator", () => {
         //         //     [.withGenerators([])]       // registers additional generators
         //         // [.withLookups({})]          // runs Environment lookups
         //         // [.withOptions({})]          // passes options to the generator
-        //         // [.withLocalConfig({})]      // sets the generator config as soon as it is instantiated
         //         // [.withPrompts()]            // simulates the prompt answers
         //         // [.build(runContext => {     // instantiates Environment/Generator
         //         //     [runContext.env...]       // does something with the environment
