@@ -62,4 +62,9 @@ typings/
 # next.js build output
 .next
 
-packages/**/**/templates/
+packages/*/src/app/templates
+
+
+packages/generator-node-puzzle-react-component/src/app/templates/**/**
+packages/generator-node-puzzle-react-component/src/app/templates/**/*
+packages/**/templates/*

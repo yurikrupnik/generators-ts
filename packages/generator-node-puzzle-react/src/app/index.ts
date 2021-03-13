@@ -58,6 +58,7 @@ class ReactGenerator extends Base {
     }
 
     _installPackages(): void {
+        // this.addDependencies({ react: "*" });
         this.npmInstall(["react", "prop-types", "react-dom", "react-router", "react-router-dom"]);
     }
 

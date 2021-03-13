@@ -1,6 +1,7 @@
 import path from "path";
 // import assert from 'yeoman-assert';
 import helpers from "yeoman-test";
+// import fs from "fs-extra";
 // const util = require('util');
 // const fs = require('fs');
 // const fs = require('fs-extra');
@@ -8,14 +9,22 @@ import helpers from "yeoman-test";
 describe("react generator", () => {
     describe("react config file", () => {
         test("react app defaults", () =>
-            helpers.run(path.join(__dirname, "../index.ts")).then(() => {
-                // assert.file('src/index.tsx');
-                // assert.fileContent('src/index.tsx', 'react');
-            }));
+            helpers
+                .run(path.join(__dirname, "../index.ts"))
+                // .inTmpDir((dir) => {
+                //     // const done = this.async(); // `this` is the RunContext object.
+                //     fs.copy(path.join(__dirname, "../templates/common"), dir);
+                // })
+                .withArguments("Nir")
+                .then(() => {
+                    // assert.file('src/index.tsx');
+                    // assert.fileContent('src/index.tsx', 'react');
+                }));
 
         test("react sass exits", () =>
             helpers
                 .run(path.join(__dirname, "../index.ts"))
+                .withArguments("Nir")
                 .withOptions({
                     sass: true,
                 })
@@ -26,6 +35,7 @@ describe("react generator", () => {
         test("react sass exits", () =>
             helpers
                 .run(path.join(__dirname, "../index.ts"))
+                .withArguments("Nir")
                 .withOptions({
                     sass: false,
                 })
@@ -33,15 +43,16 @@ describe("react generator", () => {
                     // assert.file('src/index.tsx');
                 }));
 
-        test("react sass exits", () =>
-            helpers
-                .run(path.join(__dirname, "../index.ts"))
-                .withOptions({
-                    sass: true,
-                })
-                .then(() => {
-                    // assert.file('src/index.tsx');
-                }));
+        // test("react sass exits", () =>
+        //     helpers
+        //         .run(path.join(__dirname, "../index.ts"))
+        //         .withArguments("Nir")
+        //         .withOptions({
+        //             sass: true,
+        //         })
+        //         .then(() => {
+        //             // assert.file('src/index.tsx');
+        //         }));
         // test('react app defaults', () => {
         //     return helpers
         //         .run(path.join(__dirname, '../index.ts'))
